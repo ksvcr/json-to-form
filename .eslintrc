@@ -1,0 +1,48 @@
+{
+  "plugins": [
+    "prettier",
+    "unicorn"
+  ],
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:react-perf/recommended",
+    "plugin:promise/recommended",
+    "plugin:compat/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "@typescript-eslint/no-explicit-any": [
+      "error",
+      {
+        "ignoreRestArgs": true
+      }
+    ],
+    "prettier/prettier": "error",
+    "promise/always-return": "off",
+    "unicorn/filename-case": "off",
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/no-array-reduce": "off",
+    "unicorn/no-null": "off",
+    "unicorn/prefer-module": "off",
+    "unicorn/prefer-spread": "off",
+    "unicorn/no-array-for-each": "off",
+    "react-perf/jsx-no-new-object-as-prop": [
+      "error",
+      {
+        "nativeAllowList": "all"
+      }
+    ],
+    "react-perf/jsx-no-new-function-as-prop": [
+      "error",
+      {
+        "nativeAllowList": "all"
+      }
+    ]
+  }
+}

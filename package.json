@@ -1,0 +1,60 @@
+{
+  "name": "json-to-form",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "^14.17.0"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "lints": "npm-run-all lint:*",
+    "lints:fix": "npm-run-all lint:fix:*",
+    "lint:ts": "eslint './**/*.{js,ts,tsx}'",
+    "lint:css": "stylelint 'src/**/*.css'",
+    "lint:fix:ts": "eslint './**/*.{js,ts,tsx}' --fix",
+    "lint:fix:css": "stylelint 'src/**/*.css' --fix",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^12.20.16",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-redux": "^7.1.18",
+    "classnames": "^2.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@craco/craco": "^6.2.0",
+    "@testing-library/react-hooks": "^7.0.1",
+    "dotenv": "^10.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-compat": "^3.11.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react-perf": "^3.3.0",
+    "eslint-plugin-unicorn": "^34.0.1",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.3.2",
+    "source-map-explorer": "^2.5.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-high-performance-animation": "^1.5.2",
+    "stylelint-prettier": "^1.2.0",
+    "stylelint-webpack-plugin": "^3.0.1",
+    "typescript-plugin-css-modules": "^3.4.0"
+  }
+}
