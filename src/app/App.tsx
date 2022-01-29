@@ -1,3 +1,5 @@
+import { JsonToForm } from 'features/JsonToForm';
+
 export const App = () => {
-  return <>Init</>;
+  return <JsonToForm />;
 };
