@@ -17,5 +17,6 @@ export type FormField = {
 };
 
 export type FormConfig = {
+  title: string;
   fields: FormField[];
 };
