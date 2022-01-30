@@ -64,10 +64,8 @@ export const Control = memo(({ value, config, onChange }: ControlProps) => {
   };
 
   return (
-    <div className="form-group mb-6">
-      <label className="form-label inline-block mb-2 text-gray-700" htmlFor={config.id || config.name}>
-        {config.label}
-      </label>
+    <div>
+      <label htmlFor={config.id || config.name}>{config.label}</label>
       {getControl()}
     </div>
   );

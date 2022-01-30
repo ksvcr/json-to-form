@@ -1,8 +1,10 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
 import { JsonToForm } from 'features/JsonToForm';
 import { PrettyJsonTextarea } from 'features/PrettyJsonTextarea';
 import { FormConfig } from 'features/JsonToForm/types';
+
+import { Tabs } from 'shared/components/Tabs';
 
 const jsonConfig: FormConfig = {
   title: 'Form',
@@ -67,10 +69,21 @@ export const App = () => {
     setJson(value);
   }, []);
 
-  return (
-    <>
-      <PrettyJsonTextarea value={json} onChange={handleChange} />
-      <JsonToForm config={json} />
-    </>
+  const tabItems = useMemo(
+    () => [
+      {
+        title: 'Config',
+        id: 'config',
+        content: <PrettyJsonTextarea value={json} onChange={handleChange} />
+      },
+      {
+        title: 'Result',
+        id: 'result',
+        content: <JsonToForm config={json} />
+      }
+    ],
+    [handleChange, json]
   );
+
+  return <Tabs activeId="config" items={tabItems} />;
 };
