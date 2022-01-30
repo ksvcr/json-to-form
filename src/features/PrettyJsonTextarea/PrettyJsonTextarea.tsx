@@ -15,6 +15,7 @@ type PrettyJsonTextareaProps<T> = {
 export const PrettyJsonTextarea = <T extends object>({ value, onChange }: PrettyJsonTextareaProps<T>) => {
   const [jsonString, setJsonString] = useState(() => JSON.stringify(value, null, 2));
   const [error, setError] = useState<string>();
+  const [success, setSuccess] = useState<boolean>(false);
 
   const handleChange = useCallback((e: ChangeEvent<HTMLTextAreaElement>) => {
     const { value } = e.target;
@@ -29,7 +30,9 @@ export const PrettyJsonTextarea = <T extends object>({ value, onChange }: Pretty
 
       await validateJson(parsedValue);
       onChange(parsedValue);
+      setSuccess(true);
     } catch (error) {
+      setSuccess(false);
       if (error instanceof SyntaxError || error instanceof Joi.ValidationError) {
         setError(error.message);
       }
@@ -40,6 +43,7 @@ export const PrettyJsonTextarea = <T extends object>({ value, onChange }: Pretty
     <>
       <Textarea className={styles.textarea} value={jsonString} onChange={handleChange} />
       {error && <div className={styles.error}>{error}</div>}
+      {success && <div className={styles.success}>Form is generated</div>}
 
       <div className={styles.controls}>
         <Button type="button" onClick={handleApply}>

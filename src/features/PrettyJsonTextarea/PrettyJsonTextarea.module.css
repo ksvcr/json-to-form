@@ -3,6 +3,11 @@
   padding: var(--space-md) 0;
 }
 
+.success {
+  color: green;
+  padding: var(--space-md) 0;
+}
+
 .controls {
   padding: var(--space-md) 0;
   display: flex;
