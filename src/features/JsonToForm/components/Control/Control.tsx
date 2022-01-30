@@ -48,16 +48,16 @@ export const Control = memo(({ value, config, onChange }: ControlProps) => {
         return (
           <RadioGroup
             value={value}
+            options={config.options}
             id={config.id}
             name={config.name}
-            options={config.options}
             onChange={handleInputChange}
           />
         );
       case 'checkbox':
-        return <Checkbox value={Boolean(value)} name={config.name} onChange={handleInputChange} />;
+        return <Checkbox value={Boolean(value)} id={config.id} name={config.name} onChange={handleInputChange} />;
       case 'date':
-        return <Date value={value.toString()} name={config.name} onChange={handleInputChange} />;
+        return <Date value={value.toString()} id={config.id} name={config.name} onChange={handleInputChange} />;
       default:
         return null;
     }
