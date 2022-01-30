@@ -2,6 +2,8 @@ import { FormConfig } from 'features/FormFromJson/types';
 
 export const defaultJsonConfig: FormConfig = {
   title: 'Form',
+  submitText: 'Submit',
+  cancelText: 'Cancel',
   fields: [
     {
       label: 'Text',
