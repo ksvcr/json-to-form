@@ -1,0 +1,26 @@
+:root {
+  --primary-color: #aff0c5;
+  --border-color-base: #cfcfcf;
+  --border-color-split: #cfcfcf;
+  --text-color: #000;
+  --table-header-bg: #fff;
+
+  --border-radius-base: 8px;
+
+  --font-noto-sans: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+
+  --font-size-base: 14px;
+  --font-size-xl: 24px;
+  --font-size-lg: 18px;
+  --font-size-md: 16px;
+  --font-size-sm: 12px;
+
+  --line-height-base: 1.5715;
+
+  --space-xl: 40px;
+  --space-lg: 24px;
+  --space-md: 16px;
+  --space-sm: 12px;
+  --space-xs: 8px;
+  --space-xss: 4px;
+}
