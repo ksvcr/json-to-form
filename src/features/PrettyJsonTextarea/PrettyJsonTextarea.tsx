@@ -1,4 +1,3 @@
-import Joi from 'joi';
 import { useCallback, useState, ChangeEvent } from 'react';
 
 import { Textarea } from 'shared/components/Textarea';
@@ -28,12 +27,18 @@ export const PrettyJsonTextarea = <T extends object>({ value, onChange }: Pretty
       const parsedValue = JSON.parse(jsonString);
       setJsonString(JSON.stringify(parsedValue, null, 2));
 
-      await validateJson(parsedValue);
-      onChange(parsedValue);
+      const state = validateJson(parsedValue);
+
+      if (state.error) {
+        setError(state.error.message);
+        return;
+      }
+
       setSuccess(true);
+      onChange(parsedValue);
     } catch (error) {
       setSuccess(false);
-      if (error instanceof SyntaxError || error instanceof Joi.ValidationError) {
+      if (error instanceof SyntaxError) {
         setError(error.message);
       }
     }
@@ -42,8 +47,16 @@ export const PrettyJsonTextarea = <T extends object>({ value, onChange }: Pretty
   return (
     <>
       <Textarea className={styles.textarea} value={jsonString} onChange={handleChange} />
-      {error && <div className={styles.error}>{error}</div>}
-      {success && <div className={styles.success}>Form is generated</div>}
+      {error && (
+        <div className={styles.error} role="alert">
+          {error}
+        </div>
+      )}
+      {success && (
+        <div className={styles.success} role="status">
+          Form is generated
+        </div>
+      )}
 
       <div className={styles.controls}>
         <Button type="button" onClick={handleApply}>

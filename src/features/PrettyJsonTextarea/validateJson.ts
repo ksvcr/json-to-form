@@ -24,5 +24,5 @@ export const validateJson = <T extends object>(json: T) => {
     )
   });
 
-  return schema.validateAsync(json);
+  return schema.validate(json);
 };
