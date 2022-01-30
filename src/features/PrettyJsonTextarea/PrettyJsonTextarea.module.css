@@ -1,0 +1,14 @@
+.error {
+  color: red;
+  padding: var(--space-md) 0;
+}
+
+.controls {
+  padding: var(--space-md) 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.textarea {
+  height: 400px;
+}

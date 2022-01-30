@@ -13,15 +13,21 @@ body {
   color: var(--text-color);
 }
 
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-}
-
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: var(--space-xs);
+  border: none;
+  border: 1px solid var(--border-color-base);
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  width: auto;
 }

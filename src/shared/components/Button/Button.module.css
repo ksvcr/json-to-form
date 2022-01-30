@@ -1,0 +1,9 @@
+.button {
+  padding: var(--space-sm) var(--space-lg);
+  font-size: inherit;
+  border: 0;
+  border-radius: var(--border-radius-base);
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+}

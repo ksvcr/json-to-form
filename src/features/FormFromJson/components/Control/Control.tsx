@@ -10,6 +10,8 @@ import { Date } from 'shared/components/Date';
 import { Checkbox } from 'shared/components/Checkbox';
 import { Textarea } from 'shared/components/Textarea';
 
+import styles from './Control.module.css';
+
 type ControlProps = {
   value: FieldValue;
   config: FormField;
@@ -64,8 +66,10 @@ export const Control = memo(({ value, config, onChange }: ControlProps) => {
   };
 
   return (
-    <div>
-      <label htmlFor={config.id || config.name}>{config.label}</label>
+    <div className={styles.control}>
+      <label className={styles.label} htmlFor={config.id || config.name}>
+        {config.label}
+      </label>
       {getControl()}
     </div>
   );

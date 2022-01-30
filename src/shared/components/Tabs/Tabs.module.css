@@ -1,0 +1,25 @@
+.nav {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  background: var(--secondary-color);
+  padding: var(--space-sm) var(--space-lg);
+  font-size: inherit;
+  border: 0;
+  border-radius: var(--border-radius-base) var(--border-radius-base) 0 0;
+  cursor: pointer;
+}
+
+.button.active {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.panels {
+  border: 1px solid var(--border-color-base);
+  padding: var(--space-md);
+}

@@ -5,6 +5,7 @@ import { PrettyJsonTextarea } from 'features/PrettyJsonTextarea';
 import { FormConfig } from 'features/FormFromJson/types';
 
 import { Tabs } from 'shared/components/Tabs';
+import { DefaultLayout } from 'shared/layouts/DefaultLayout';
 
 const jsonConfig: FormConfig = {
   title: 'Form',
@@ -85,5 +86,9 @@ export const JsonToFormScreen = () => {
     [handleChange, json]
   );
 
-  return <Tabs items={tabItems} />;
+  return (
+    <DefaultLayout>
+      <Tabs items={tabItems} />
+    </DefaultLayout>
+  );
 };
