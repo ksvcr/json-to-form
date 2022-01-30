@@ -1,7 +1,8 @@
+import { useCallback, useState } from 'react';
+
 import { JsonToForm } from 'features/JsonToForm';
 import { PrettyJsonTextarea } from 'features/PrettyJsonTextarea';
 import { FormConfig } from 'features/JsonToForm/types';
-import { useCallback, useState } from 'react';
 
 const jsonConfig: FormConfig = {
   title: 'Form',

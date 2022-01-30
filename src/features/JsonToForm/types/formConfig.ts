@@ -1,4 +1,4 @@
-export type FieldType = 'number' | 'text' | 'textarea' | 'checkbox' | 'date' | 'radio' | 'group';
+export type FieldType = 'number' | 'text' | 'textarea' | 'checkbox' | 'date' | 'radio';
 
 export type FieldValue = string | number | boolean;
 
