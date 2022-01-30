@@ -1,5 +1,5 @@
 const path = require('path');
-
+const webpack = require('webpack');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
@@ -11,7 +11,12 @@ module.exports = {
           context: path.resolve(__dirname, 'src'),
           files: ['**/*.css']
         })
-      ].filter(Boolean)
+      ]
+    }
+  },
+  style: {
+    postcss: {
+      plugins: [require('tailwindcss'), require('autoprefixer')]
     }
   },
   plugins: []
