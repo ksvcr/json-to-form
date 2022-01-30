@@ -7,7 +7,7 @@ import { FormConfig } from 'features/FormFromJson/types';
 import { Tabs } from 'shared/components/Tabs';
 import { DefaultLayout } from 'shared/layouts/DefaultLayout';
 
-const jsonConfig: FormConfig = {
+const defaultJsonConfig: FormConfig = {
   title: 'Form',
   fields: [
     {
@@ -64,7 +64,7 @@ const jsonConfig: FormConfig = {
 };
 
 export const JsonToFormScreen = () => {
-  const [json, setJson] = useState<FormConfig>(jsonConfig);
+  const [json, setJson] = useState<FormConfig>(defaultJsonConfig);
 
   const handleChange = useCallback((value: FormConfig) => {
     setJson(value);

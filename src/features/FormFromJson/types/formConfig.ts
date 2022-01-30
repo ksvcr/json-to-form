@@ -18,5 +18,9 @@ export type FormField = {
 
 export type FormConfig = {
   title: string;
+  submitText?: string;
+  cancelText?: string;
+  hideSubmit?: boolean;
+  hideCancel?: boolean;
   fields: FormField[];
 };

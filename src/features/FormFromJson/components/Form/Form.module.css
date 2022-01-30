@@ -1,0 +1,6 @@
+.controls {
+  margin-top: var(--space-md);
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
