@@ -36,7 +36,7 @@ export const PrettyJsonTextarea = <T extends object>({ value, onChange }: Pretty
   return (
     <>
       <Textarea value={jsonString} onChange={handleChange} />
-      {error && <div className="error">{error}</div>}
+      {error && <div>{error}</div>}
       <button type="button" onClick={handleApply}>
         Apply
       </button>

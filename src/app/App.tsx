@@ -85,5 +85,5 @@ export const App = () => {
     [handleChange, json]
   );
 
-  return <Tabs activeId="config" items={tabItems} />;
+  return <Tabs items={tabItems} />;
 };
