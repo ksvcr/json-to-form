@@ -1,7 +1,7 @@
-import { FormConfig } from 'features/JsonToForm/types';
-import { FormContextProvider } from 'features/JsonToForm/FormContext';
+import { FormConfig } from 'features/FormFromJson/types';
+import { FormContextProvider } from 'features/FormFromJson/FormContext';
 
-import { Fields } from 'features/JsonToForm/components/Fields';
+import { Fields } from 'features/FormFromJson/components/Fields';
 
 type FormProps = {
   config: FormConfig;

@@ -1,7 +1,7 @@
-import { FormField } from 'features/JsonToForm/types';
+import { FormField } from 'features/FormFromJson/types';
 
-import { Field } from 'features/JsonToForm/components/Field';
-import { Control } from 'features/JsonToForm/components/Control';
+import { Field } from 'features/FormFromJson/components/Field';
+import { Control } from 'features/FormFromJson/components/Control';
 
 type FieldsProps = {
   fields?: FormField[];

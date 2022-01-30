@@ -1,6 +1,6 @@
 import { createContext, useContext, useMemo, useState, useCallback, ReactNode } from 'react';
 
-import { FormConfig, FormField, FieldValue } from 'features/JsonToForm/types';
+import { FormConfig, FormField, FieldValue } from 'features/FormFromJson/types';
 
 type FormData = Record<FormField['name'], FieldValue>;
 

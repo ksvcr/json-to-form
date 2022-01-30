@@ -1,5 +1,5 @@
 import { TextareaHTMLAttributes } from 'react';
-import { FieldValue } from 'features/JsonToForm/types';
+import { FieldValue } from 'features/FormFromJson/types';
 
 type TextareaProps = Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'value'> & { value: FieldValue };
 

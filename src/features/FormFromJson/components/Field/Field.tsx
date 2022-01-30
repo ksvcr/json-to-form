@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
-import { FormField, FieldValue } from 'features/JsonToForm/types';
+import { FormField, FieldValue } from 'features/FormFromJson/types';
 
-import { useFormField } from 'features/JsonToForm/FormContext';
+import { useFormField } from 'features/FormFromJson/FormContext';
 
 type FieldProps = {
   children: (value: FieldValue, onChange: (value: FieldValue) => void) => ReactNode;

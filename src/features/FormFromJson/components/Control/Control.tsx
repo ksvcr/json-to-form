@@ -1,8 +1,8 @@
 import { useCallback, ChangeEvent, memo } from 'react';
 
-import { FormField, FieldValue } from 'features/JsonToForm/types';
+import { FormField, FieldValue } from 'features/FormFromJson/types';
 
-import { RadioGroup } from 'features/JsonToForm/components/RadioGroup';
+import { RadioGroup } from 'features/FormFromJson/components/RadioGroup';
 
 import { TextInput } from 'shared/components/TextInput';
 import { Number } from 'shared/components/Number';

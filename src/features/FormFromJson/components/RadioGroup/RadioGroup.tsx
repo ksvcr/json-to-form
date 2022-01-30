@@ -1,6 +1,6 @@
 import { ChangeEventHandler } from 'react';
 
-import { FieldValue, FieldOption, FormField } from 'features/JsonToForm/types';
+import { FieldValue, FieldOption, FormField } from 'features/FormFromJson/types';
 import { Radio } from 'shared/components/Radio';
 
 type RadioGroupProps = {
