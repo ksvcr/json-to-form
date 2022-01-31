@@ -7,3 +7,7 @@
   background: var(--primary-color);
   color: #fff;
 }
+
+.button:active {
+  background: var(--primary-color-darker);
+}

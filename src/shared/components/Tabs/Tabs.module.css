@@ -19,6 +19,10 @@
   color: #fff;
 }
 
+.button:not(.active):active {
+  background: var(--secondary-color-darker);
+}
+
 .panels {
   border: 1px solid var(--border-color-base);
   padding: var(--space-md);
