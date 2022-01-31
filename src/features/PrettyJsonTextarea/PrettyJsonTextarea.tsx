@@ -30,6 +30,7 @@ export const PrettyJsonTextarea = <T extends object>({ value, onChange }: Pretty
       const state = validateJson(parsedValue);
 
       if (state.error) {
+        setSuccess(false);
         setError(state.error.message);
         return;
       }
