@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/json-to-form/static/css/main.cc071794.chunk.css",
+    "main.js": "/json-to-form/static/js/main.7cdfa70d.chunk.js",
+    "main.js.map": "/json-to-form/static/js/main.7cdfa70d.chunk.js.map",
+    "runtime-main.js": "/json-to-form/static/js/runtime-main.a30b68b1.js",
+    "runtime-main.js.map": "/json-to-form/static/js/runtime-main.a30b68b1.js.map",
+    "static/js/2.5f8ab00f.chunk.js": "/json-to-form/static/js/2.5f8ab00f.chunk.js",
+    "static/js/2.5f8ab00f.chunk.js.map": "/json-to-form/static/js/2.5f8ab00f.chunk.js.map",
+    "index.html": "/json-to-form/index.html",
+    "static/css/main.cc071794.chunk.css.map": "/json-to-form/static/css/main.cc071794.chunk.css.map",
+    "static/js/2.5f8ab00f.chunk.js.LICENSE.txt": "/json-to-form/static/js/2.5f8ab00f.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/json-to-form/static/media/NotoSans-Regular.1ded6c43.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a30b68b1.js",
+    "static/js/2.5f8ab00f.chunk.js",
+    "static/css/main.cc071794.chunk.css",
+    "static/js/main.7cdfa70d.chunk.js"
+  ]
+}
