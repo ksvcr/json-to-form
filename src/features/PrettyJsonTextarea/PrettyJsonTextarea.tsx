@@ -13,7 +13,7 @@ type PrettyJsonTextareaProps<T> = {
 
 export const PrettyJsonTextarea = <T extends object>({ value, onChange }: PrettyJsonTextareaProps<T>) => {
   const [jsonString, setJsonString] = useState(() => JSON.stringify(value, null, 2));
-  const [error, setError] = useState<string>();
+  const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<boolean>(false);
 
   const handleChange = useCallback((e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -36,6 +36,7 @@ export const PrettyJsonTextarea = <T extends object>({ value, onChange }: Pretty
       }
 
       setSuccess(true);
+      setError(null);
       onChange(parsedValue);
     } catch (error) {
       setSuccess(false);
